@@ -26,7 +26,7 @@ N_phi = 41
 phis = np.linspace(0, 40, N_phi)  # Grid for estimation
 
 # SNR levels
-SNR_dB = np.linspace(-5, 30, 10)  # SNR range (dB)
+SNR_dB = np.linspace(-5, 20, 10)  # SNR range (dB)
 SNR = 10 ** (SNR_dB / 10)  # Linear SNR values
 
 # Monte Carlo simulation settings
