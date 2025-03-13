@@ -175,12 +175,11 @@ for theta1 in theta1_values:
 # -----------------------------
 plt.figure(figsize=(10, 6))
 # One-Angle RMSE: solid line with circle markers
-plt.plot(theta_values, rmse_results_one, marker='o', linestyle='-', linewidth=2, color='black', label='One-Angle RMSE')
+plt.plot(theta_values, rmse_results_one, marker='o', linestyle='-', linewidth=2, color='red', label='One-Angle RMSE')
 # Two-Angle Total RMSE: dashed line with square markers
-plt.plot(theta1_values, rmse_results_two, marker='s', linestyle='--', linewidth=2, color='black', label='Two-Angle Total RMSE')
+plt.plot(theta1_values, rmse_results_two, marker='s', linestyle='--', linewidth=2, color='blue', label='Two-Angle Total RMSE')
 plt.xlabel('Angle (degrees)')
 plt.ylabel('RMSE (radians)')
-plt.title('Comparison of RMSE for One-Angle and Two-Angle Estimations')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
