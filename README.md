@@ -1,6 +1,6 @@
 # LWA Channel Response and Angle Estimation Simulation
 
-This repository contains Python code to simulate and analyze the performance of Leaky-Wave Antenna (LWA) channel responses for angle estimation. The simulations include both one-angle and two-angle estimation scenarios using various methods, such as grid search, inner product matching, and ULA beamforming. In addition, the code computes performance metrics like RMSE and the Cramér-Rao Bound (CRB) using both finite difference and analytic derivative approaches.
+This repository contains Python code to simulate and analyze the performance of Leaky-Wave Antenna (LWA) channel responses for angle estimation. The simulations include both one-angle and two-angle estimation scenarios using various methods, such as grid search, LWA Beamforming, and ULA beamforming. In addition, the code computes performance metrics like RMSE and the Cramér-Rao Bound (CRB) using both finite difference and analytic derivative approaches.
 
 ## Overview
 
