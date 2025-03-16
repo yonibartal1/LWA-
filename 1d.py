@@ -26,14 +26,14 @@ N_phi = 41
 phis = np.linspace(0, 40, N_phi)  # Grid for estimation
 
 # SNR levels
-SNR_dB = np.linspace(-5, 20, 10)  # SNR range (dB)
+SNR_dB = np.linspace(-5, 15, 10)  # SNR range (dB)
 SNR = 10 ** (SNR_dB / 10)  # Linear SNR values
 
 # Monte Carlo simulation settings
 num_MC = 1000  # Number of Monte Carlo simulations
 
 # Element count for ULA
-ne = 8
+ne = 6
 
 # Preallocate error arrays: rows = MC iterations, columns = SNR values
 errors_LWA = np.zeros((num_MC, len(SNR_dB)))
@@ -96,7 +96,7 @@ def analytic_crb(theta, fn, c, b, L, sigma2):
 
 
 # Small perturbation for finite differences (in radians)
-delta = 1e-6
+delta = 1e-8
 
 # Outer loop over Monte Carlo simulations
 for mc in range(num_MC):
