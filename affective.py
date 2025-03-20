@@ -50,7 +50,7 @@ x = np.exp(1j * phases)
 # -----------------------------
 candidate_angles = np.linspace(0, 90, 90)  # Candidate angles (0° to 90°)
 theta_values = np.arange(5, 86, 5)  # True angle values from 5° to 85°
-num_mc = 500  # Number of Monte Carlo iterations per angle
+num_mc = 10000  # Number of Monte Carlo iterations per angle
 
 rmse_results_one = []
 np.random.seed(0)  # For reproducibility
