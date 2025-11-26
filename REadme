@@ -1,0 +1,66 @@
+# 📡 Multiuser Localization with Leaky-Wave Antennas (LWA)
+
+This repository contains the full Python implementation used in the thesis:
+
+**“Multiuser Localization with Leaky-Wave Antennas” (Yoni Bartal, BGU 2025)**
+
+The project implements signal-processing algorithms for **THz-band localization** using **Leaky-Wave Antennas** (LWAs), exploiting their natural **frequency–angle coupling** for single- and multi-user angle-of-arrival (AoA) estimation.
+
+The repository includes:
+
+- Maximum Likelihood (ML) estimator  
+- Correlation-based LWA beamforming  
+- LWA–MUSIC (frequency-manifold MUSIC)  
+- CRB derivations (numeric + analytic)  
+- Single-user + multi-user simulations  
+- Comparison vs. ULA beamforming  
+- High-resolution pseudospectrum visualization  
+
+---
+
+## 🚀 Installation
+
+Install dependencies:
+
+```bash
+pip install numpy matplotlib scipy
+```
+
+Run any script:
+
+```bash
+python 2D_F.py
+python MUSIC_spectrum.py
+python 1D_SMINAR.py
+python 2D_SMINAR.py
+python affective.py
+```
+
+---
+
+## 📁 Repository Structure
+
+### 🔹 2D_F.py — Full LWA Localization Simulator
+Comprehensive Monte-Carlo framework for ML, correlation, MUSIC, ULA baseline, CRB, and RMSE vs. SNR.
+
+### 🔹 MUSIC_spectrum.py — LWA–MUSIC Pseudospectrum
+Generates two-user pseudospectrum and detects peaks.
+
+### 🔹 1D_SMINAR.py — Single-Angle RMSE Benchmark
+
+### 🔹 2D_SMINAR.py — Two-Angle RMSE Benchmark
+
+### 🔹 affective.py — Alternative Single-User Simulation
+
+---
+
+## 📘 Citation
+
+Bartal, Y. (2025). *Multiuser Localization with Leaky-Wave Antennas*.  
+M.Sc. Thesis, Ben-Gurion University.
+
+---
+
+## 📄 License
+
+MIT License
