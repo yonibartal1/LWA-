@@ -1,66 +1,31 @@
-# 📡 Multiuser Localization with Leaky-Wave Antennas (LWA)
+# LWA Channel Response and Angle Estimation Simulation
 
-This repository contains the full Python implementation used in the thesis:
+This repository contains Python code to simulate and analyze the performance of Leaky-Wave Antenna (LWA) channel responses for angle estimation. The simulations include both one-angle and two-angle estimation scenarios using various methods, such as grid search, LWA Beamforming, and ULA beamforming. In addition, the code computes performance metrics like RMSE and the Cramér-Rao Bound (CRB) using both finite difference and analytic derivative approaches.
 
-**“Multiuser Localization with Leaky-Wave Antennas” (Yoni Bartal, BGU 2025)**
+## Overview
 
-The project implements signal-processing algorithms for **THz-band localization** using **Leaky-Wave Antennas** (LWAs), exploiting their natural **frequency–angle coupling** for single- and multi-user angle-of-arrival (AoA) estimation.
+The repository covers:
+- **LWA Channel Response Simulation:** Computes a sinc-based channel response over a range of frequencies.
+- **One-Angle Estimation:** Uses grid search to estimate a single target angle and evaluates its RMSE.
+- **Two-Angle Estimation:** Simultaneously estimates two target angles with a permutation-invariant error metric.
+- **CRB Analysis:** Compares numerical CRB (using finite differences) and analytic CRB (using derivative calculations) for LWA.
+- **ULA Beamforming Comparison:** Evaluates a conventional Uniform Linear Array (ULA) beamforming method for angle estimation.
 
-The repository includes:
+## Features
 
-- Maximum Likelihood (ML) estimator  
-- Correlation-based LWA beamforming  
-- LWA–MUSIC (frequency-manifold MUSIC)  
-- CRB derivations (numeric + analytic)  
-- Single-user + multi-user simulations  
-- Comparison vs. ULA beamforming  
-- High-resolution pseudospectrum visualization  
+- **Sinc-Based Modeling:** Models the LWA channel response using a sinc function.
+- **Multiple Estimation Methods:** Implements grid search, inner product matching, and ULA beamforming.
+- **Monte Carlo Simulations:** Performs multiple iterations to statistically assess estimation accuracy.
+- **Performance Metrics:** Calculates RMSE and CRB to benchmark different methods.
+- **Visualization:** Generates plots to compare estimation accuracy across various SNR levels and angle configurations.
 
----
+## Requirements
 
-## 🚀 Installation
+- Python 3.12
+- NumPy
+- Matplotlib
 
-Install dependencies:
+Install the necessary libraries with:
 
 ```bash
-pip install numpy matplotlib scipy
-```
-
-Run any script:
-
-```bash
-python 2D_F.py
-python MUSIC_spectrum.py
-python 1D_SMINAR.py
-python 2D_SMINAR.py
-python affective.py
-```
-
----
-
-## 📁 Repository Structure
-
-### 🔹 2D_F.py — Full LWA Localization Simulator
-Comprehensive Monte-Carlo framework for ML, correlation, MUSIC, ULA baseline, CRB, and RMSE vs. SNR.
-
-### 🔹 MUSIC_spectrum.py — LWA–MUSIC Pseudospectrum
-Generates two-user pseudospectrum and detects peaks.
-
-### 🔹 1D_SMINAR.py — Single-Angle RMSE Benchmark
-
-### 🔹 2D_SMINAR.py — Two-Angle RMSE Benchmark
-
-### 🔹 affective.py — Alternative Single-User Simulation
-
----
-
-## 📘 Citation
-
-Bartal, Y. (2025). *Multiuser Localization with Leaky-Wave Antennas*.  
-M.Sc. Thesis, Ben-Gurion University.
-
----
-
-## 📄 License
-
-MIT License
+pip install numpy matplotlib
